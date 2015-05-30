@@ -1,4 +1,4 @@
-# My Git Project
+# My Far Better Git Project
 
 ## Git Branches
 help makes changes outside of master
