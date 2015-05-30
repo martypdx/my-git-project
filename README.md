@@ -2,3 +2,6 @@
 
 ## subtitle
 here's some swell things about my repositoy
+
+## other
+another thing
