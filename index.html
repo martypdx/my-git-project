@@ -3,5 +3,30 @@
 <title> awesum page </title>
 </head>
 <body>
-	<p>hello world</p>
+	<h1>SF Parking Garages</h1>
+
+	<main></main>
+
+	<script id='template' type='text/html'>
+	{{#each garages:name}}
+		<li> {{name}}
+	{{/each}}
+	</script>
+
+	<script src='https://cdn.firebase.com/js/client/2.2.5/firebase.js'></script>
+	<script src='http://cdn.ractivejs.org/edge/ractive.js'></script>
+	<script>
+	var fbRef = new Firebase('https://publicdata-parking.firebaseio.com/');
+	var garagesRef = fbRef.child('san_francisco/garages');
+
+	var ractive = new Ractive({
+		el: 'main',
+		template: '#template'
+	});
+
+	garagesRef.once( 'value', function(ss){
+		ractive.set('garages', ss.val());
+	})
+
+	</script>
 </body>
