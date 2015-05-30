@@ -1,6 +1,6 @@
 # My Far Better Git Project
 
-## Git Branches
+## GitHub Branches
 help makes changes outside of master
 
 ## Some Last Section
